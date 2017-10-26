@@ -14,7 +14,16 @@ public class Day4
       t = MD5(part + num);
     }
     
-    System.out.println(num);
+    System.out.println("Part 1 Solution: " + num);
+    
+    int num2 = 0;
+    String t2 = MD5(part + num2);
+    while(!t2.substring(0, 6).equals("000000")) {
+      num2++;
+      t2 = MD5(part + num2);
+    }
+    
+    System.out.println("Part 2 Solution: " + num2);
   }
   
   public static String MD5(String md5) {
