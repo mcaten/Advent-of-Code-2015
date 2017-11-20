@@ -29,7 +29,7 @@ public class Day15P1 {
 		}
 		
 		
-		System.out.println(maxScore);
+		System.out.println("Part 1 Solution: " + maxScore);
 	}
 	
 	public static int calcScore(int[] dist, Ingredient[] i) {
