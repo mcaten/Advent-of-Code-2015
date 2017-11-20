@@ -1,8 +1,6 @@
 package Day15;
 import java.io.*;
 import java.util.*;
-
-import Day14.Reindeer;
 public class Day15P1 {
 	public static void main(String[] args) {
 
