@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 import Day14.Reindeer;
-public class Day15 {
+public class Day15P1 {
 	public static void main(String[] args) {
 
 		init();
@@ -24,7 +24,6 @@ public class Day15 {
 			int score = calcScore(temp, i);
 			
 			if(score > maxScore) {
-				//System.out.println(perm[row][0] + " "  + perm[row][1]);
 				maxScore = score;
 			}
 		}
