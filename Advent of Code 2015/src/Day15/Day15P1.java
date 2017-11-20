@@ -28,6 +28,7 @@ public class Day15P1 {
 			}
 		}
 		
+		
 		System.out.println(maxScore);
 	}
 	
