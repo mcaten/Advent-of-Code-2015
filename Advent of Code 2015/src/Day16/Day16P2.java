@@ -1,7 +1,7 @@
 package Day16;
 import java.io.*;
 import java.util.*;
-public class Day16P1 {
+public class Day16P2 {
 	public static void main(String[] args) {
 
 		init();
@@ -26,8 +26,63 @@ public class Day16P1 {
 			tempSue.put(sp[4], Integer.parseInt(sp[5].substring(0, sp[5].length() - 1)));
 			tempSue.put(sp[6], Integer.parseInt(sp[7]));
 			
-			if(realSue.get(sp[2]) == tempSue.get(sp[2]) && realSue.get(sp[4]) == tempSue.get(sp[4]) && realSue.get(sp[6]) == tempSue.get(sp[6])) {
-				System.out.println("Part 1 Solution: " + sNum);
+			boolean isSue = true;
+			if(sp[2].equals("cats:") || sp[2].equals("trees:")) {
+				if(tempSue.get(sp[2]) <= realSue.get(sp[2])) {
+					isSue = false;
+				}
+			}
+			
+			else if(sp[2].equals("pomeranians:") || sp[2].equals("goldfish:")) {
+				if(tempSue.get(sp[2]) >= realSue.get(sp[2])) {
+					isSue = false;
+				}
+			}
+			
+			else {
+				if(tempSue.get(sp[2]) != realSue.get(sp[2])) {
+					isSue = false;
+				}
+			}
+			
+			if(sp[4].equals("cats:") || sp[4].equals("trees:")) {
+				if(tempSue.get(sp[4]) <= realSue.get(sp[4])) {
+					isSue = false;
+				}
+			}
+			
+			else if(sp[4].equals("pomeranians:") || sp[4].equals("goldfish:")) {
+				if(tempSue.get(sp[4]) >= realSue.get(sp[4])) {
+					isSue = false;
+				}
+			}
+			
+			else {
+				if(tempSue.get(sp[4]) != realSue.get(sp[4])) {
+					isSue = false;
+				}
+			}
+			
+			if(sp[6].equals("cats:") || sp[6].equals("trees:")) {
+				if(tempSue.get(sp[6]) <= realSue.get(sp[6])) {
+					isSue = false;
+				}
+			}
+			
+			else if(sp[6].equals("pomeranians:") || sp[6].equals("goldfish:")) {
+				if(tempSue.get(sp[6]) >= realSue.get(sp[6])) {
+					isSue = false;
+				}
+			}
+			
+			else {
+				if(tempSue.get(sp[6]) != realSue.get(sp[6])) {
+					isSue = false;
+				}
+			}
+			
+			if(isSue) {
+				System.out.println("Part 2 Solution: " + sNum);
 			}
 		}
 		
